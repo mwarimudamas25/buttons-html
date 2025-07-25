@@ -21,8 +21,8 @@
       margin: 0;
     }
     .custom-button {
-      width: 200px;
-      height: 56px;
+      width: 300px;
+      height: 40px;
       background-color: blue;
       color: white;
       border: none;
@@ -601,7 +601,7 @@ function submitQuiz() {
   document.getElementById("result").textContent = "Tegereza gato...Sisitemu irimo kubara amanota yawe...";
   setTimeout(() => {
     document.getElementById("startQuizBtn").textContent = "Ikizami Cyarangiye!";
-    document.getElementById("startQuizBtn").style.color = "white";
+    document.getElementById("startQuizBtn").style.color = "red";
     let score = 0;
     for (let i = 0; i < 20; i++) {
       if (userAnswers[i] === correctAnswers[i]) score++;
