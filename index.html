@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ikizamini No.5</title>
+  <title>IKIZAMI CYA 5</title>
   <script>
     document.addEventListener("copy", function(e) {
       e.preventDefault();
@@ -321,7 +321,7 @@ function closePasswordModal() {
 }
 function checkPassword() {
   const inputField = document.getElementById("password-input");
-  if (inputField.value === "1234") {
+  if (inputField.value === "86645") {
     closeModal();
     startQuiz();
   } else {
@@ -578,14 +578,13 @@ function startTimer() {
     const mins = Math.floor(time / 60);
     const secs = time % 60;
     timerDiv.textContent = `Igihe Gisigaye: ${mins}:${secs < 10 ? '0' + secs : secs}`;
-     time--;
-        if (time < 0 || submitted) {
-          clearInterval(timer);
-          timerDiv.textContent = "Igihe gisigaye: 00:00";
-          if (!submitted) submitQuiz();
-        }
-      }, 1000);
+    time--;
+    if (time < 0 || submitted) {
+      clearInterval(interval);
+      if (!submitted) submitQuiz();
     }
+  }, 1000);
+}
 
     
 // Corrected submitQuiz() function with proper scrolling logic
